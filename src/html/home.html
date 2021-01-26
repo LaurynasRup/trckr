@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Football Trckr || Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="icon" type="image/png" href="./img/ball.png"/>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+    <nav class="nav-bar1 open">
+        <div class="logo-text"><span class="text-my">My</span><span class="text-trckr">trckr</span></div>
+        <img class="ball-pic" src="img/ball.png" alt="football">
+        <div class="nav-items">
+            <a href="leagues.html" class="nav-item">Leagues</a>
+            <a href="home.html" class="nav-item active">Home</a>
+            <a href="logout.html" class="nav-item">Log out</a>
+        </div>
+    </nav>
+
+    <div class="home-main-cont">
+        <div class="top-cont">
+            <button class="scores-btn btn" id="scores-btn">Results</button>
+            <h4 class="league-table-title" id="league-table-title"></h4>
+            <button class="fixtures-btn" id="fixtures-btn">Fixtures</button>
+        </div>
+
+        <div class="league-table-cont"></div> 
+
+        <div class="saved-leagues">
+            <div class="saved-leagues-inner"></div>
+        </div>
+
+        <div class="scores-cont">
+            <div class="close-btn left">
+                <div class="cl-line line1"></div>
+                <div class="cl-line line2"></div>
+            </div>
+            <div class="scores-cont-inner">
+                <h2 class="section-head" id="results-cont-header">Results</h2>
+                <div class="round-control" id="scores-round-control">
+                    <i class="fas fa-chevron-left prev-round"></i>
+                    <p class="round-head" id="results-round-head"></p>
+                    <i class="fa fa-chevron-right next-round hide"></i>
+                </div>
+                <div class="round-info" id="results-round-cont">
+                </div>
+            </div>
+        </div>
+        <div class="fixtures-cont">
+            <div class="close-btn right">
+                <div class="cl-line line1"></div>
+                <div class="cl-line line2"></div>
+            </div>
+            <div class="fixtures-cont-inner">
+                <h2 class="section-head" id="fixtures-cont-header">Fixtures</h2>
+                <div class="round-control" id="fixtures-round-control">
+                    <i class="fas fa-chevron-left prev-round hide"></i>
+                    <p class="round-head" id="fixtures-round-header"></p>
+                    <i class="fa fa-chevron-right next-round"></i>
+                </div>
+                    <div class="round-info" id="fixtures-round-cont">
+                </div>
+            </div>
+        </div> 
+
+</body>
+</html>

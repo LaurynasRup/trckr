@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>My Football Trckr || Log in</title>
+		<link rel="icon" type="image/png" href="./img/ball.png" />
+		<link rel="stylesheet" href="./css/styles.css" />
+	</head>
+	<body class="show">
+		<nav class="nav-bar1">
+			<div class="logo-text">
+				<span class="text-my">My</span><span class="text-trckr">trckr</span>
+			</div>
+			<img class="ball-pic" src="./img/ball.png" alt="football" />
+		</nav>
+
+		<div class="main-cont">
+			<h2 class="main-cont-head">Log in to My Football Trckr account</h2>
+			<h4>Track your favourite leagues, teams and more...</h4>
+
+			<form id="log-in-form">
+				<div class="form-control">
+					<input
+						id="log-in-email"
+						name="log-in-email"
+						type="text"
+						placeholder="Email Address"
+						autocomplete="off"
+					/>
+					<small class="error-msg"></small>
+				</div>
+				<div class="form-control">
+					<input
+						id="log-in-pass"
+						name="log-in-pass"
+						type="password"
+						placeholder="Password"
+						autocomplete="off"
+					/>
+					<small class="error-msg"></small>
+				</div>
+
+				<a href="signup.html" class="signup-red">No account? Signup here!</a>
+
+				<button id="log-in-btn" class="form-btn log-in-btn">Log in</button>
+			</form>
+		</div>
+	</body>
+</html>
