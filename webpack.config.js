@@ -9,6 +9,7 @@ module.exports = {
 		login: './src/js/Login/login.js',
 		signup: './src/js/Signup/signup.js',
 		logout: './src/js/Logout/logout.js',
+		index: './src/js/Index/index.js',
 	},
 	node: {
 		fs: 'empty',
@@ -48,6 +49,11 @@ module.exports = {
 			filename: 'logout.html',
 			template: './src/html/logout.html',
 			chunks: ['logout'],
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'index.html',
+			template: './src/html/index.html',
+			chunks: ['index'],
 		}),
 	],
 	module: {

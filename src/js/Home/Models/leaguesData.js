@@ -6,7 +6,7 @@ export const fetchLeagueData = async (activeLeague) => {
 	if (activeLeague) {
 		// fetch league table data
 		const response = await fetch(
-			`${proxyurl}${apiData.url}/${leagueCodes[activeLeague]}/standings`,
+			`${apiData.url}/${leagueCodes[activeLeague]}/standings`,
 			{
 				method: 'GET',
 				headers: {
