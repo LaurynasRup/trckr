@@ -1,6 +1,15 @@
 export const fetchData = async (email) => {
-    const response = await fetch(`http://localhost:5000/getLeagues/${email}`);
-    const data = response.json();
-
-    return data;
+	try {
+		const response = await fetch(
+			`http://localhost:5000/api/users/getUser/${email}`
+		);
+		const data = await response.json();
+		if (!data.liked_leagues) {
+			return false;
+		} else {
+			return data.liked_leagues;
+		}
+	} catch (err) {
+		throw err;
+	}
 };

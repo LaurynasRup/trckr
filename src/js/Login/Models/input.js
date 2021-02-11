@@ -52,17 +52,35 @@ export const validateUser = async (inputObj, dbObj, inputs) => {
 
 // Function to fetch data from database
 export const fetchData = async (mail) => {
-	const response = await fetch(`http://localhost:5000/getItem/${mail}`);
-	const data = await response.json();
-	if (data.data[0]) {
-		const { email, password } = data.data[0];
-		return {
-			email: email,
-			password: password,
-		};
-	} else {
-		return false;
+	try {
+		const response = await fetch(
+			`http://localhost:5000/api/users/getUser/${mail}`,
+			{
+				headers: {
+					'Content-Type': 'application/json',
+					Accept: 'application/json',
+				},
+			}
+		);
+		const data = await response.json();
+		if (data) {
+			const { email, password } = data;
+			return { email, password };
+		} else {
+			return false;
+		}
+	} catch (err) {
+		console.log(err);
 	}
+	// if (data.data[0]) {
+	// 	const { email, password } = data.data[0];
+	// 	return {
+	// 		email: email,
+	// 		password: password,
+	// 	};
+	// } else {
+	// 	return false;
+	// }
 };
 
 // Reg Ex for email

@@ -23,7 +23,7 @@ const homeControl = async () => {
 	// Retrieve liked leagues data from DB
 	const likedLeaguesData = await dbConnect.fetchData(userEmail);
 	// store liked leagues to state
-	state.likedLeagues = JSON.parse(likedLeaguesData.data[0].liked_leagues);
+	state.likedLeagues = JSON.parse(likedLeaguesData);
 	// Insert liked leagues into the DOM
 	leaguesView.insertLeaguesDOM(state.likedLeagues);
 	// Store and insert current active league
