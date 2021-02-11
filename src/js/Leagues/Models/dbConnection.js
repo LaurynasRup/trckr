@@ -1,7 +1,7 @@
 export const fetchData = async (email) => {
 	try {
 		const response = await fetch(
-			`http://localhost:5000/api/users/getUser/${email}`
+			`https://trckr-server.herokuapp.com/api/users/getUser/${email}`
 		);
 		const data = await response.json();
 		if (!data.liked_leagues) {
@@ -22,7 +22,7 @@ export const fetchData = async (email) => {
 
 export const storeData = async (str, email) => {
 	const response = await fetch(
-		`http://localhost:5000/api/leagues/store_leagues`,
+		`https://trckr-server.herokuapp.com/api/leagues/store_leagues`,
 		{
 			headers: {
 				'Content-type': 'application/json',

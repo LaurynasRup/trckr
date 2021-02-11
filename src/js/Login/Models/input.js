@@ -54,7 +54,7 @@ export const validateUser = async (inputObj, dbObj, inputs) => {
 export const fetchData = async (mail) => {
 	try {
 		const response = await fetch(
-			`http://localhost:5000/api/users/getUser/${mail}`,
+			`https://trckr-server.herokuapp.com/api/users/getUser/${mail}`,
 			{
 				headers: {
 					'Content-Type': 'application/json',
