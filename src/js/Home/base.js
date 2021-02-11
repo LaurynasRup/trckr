@@ -62,7 +62,7 @@ export const strings = {
 };
 
 export const apiData = {
-	url: 'http://api.football-data.org/v2/competitions/',
+	url: 'https://api.football-data.org/v2/competitions/',
 	token: 'd9e0ae1b7fbe4bcaa2fa45a494f54ad5',
 	proxy: 'https://cors-anywhere.herokuapp.com/',
 };
